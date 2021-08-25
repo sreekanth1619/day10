@@ -1,4 +1,4 @@
-#! /bin/bash -x 
+#! /bin/bash -x
 
 echo -n:"enter the value";
 read a
@@ -18,7 +18,7 @@ read c
 
 declare -A expressions
 
-expressions[key1]="$exp1" 
+expressions[key1]="$exp1"
 expressions[key2]="$exp2"
 expressions[key3]="$exp3"
 
@@ -27,4 +27,9 @@ array=($exp1 $exp2 $exp3)
 echo "${expressions[@]}"
 
 echo "$array"
+
+sorted=($(sort <<<"{$array[@]}"));
+   echo "${sorted[@]}"
+
+
 
